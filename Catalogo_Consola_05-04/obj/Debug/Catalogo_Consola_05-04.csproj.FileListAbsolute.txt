@@ -1,0 +1,8 @@
+C:\Users\Alumno1718\Desktop\Catalogo_Consola_05-04\bin\Debug\Catalogo_Consola_05-04.exe.config
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\Catalogo_Consola_05-04.exe.config
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\Catalogo_Consola_05-04.exe
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\Catalogo_Consola_05-04.pdb
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\obj\Debug\Catalogo_Consola_05-04.csprojResolveAssemblyReference.cache
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\obj\Debug\Catalogo_Consola_05-04.exe
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\obj\Debug\Catalogo_Consola_05-04.pdb
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\MySql.Data.dll
