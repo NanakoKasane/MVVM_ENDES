@@ -12,3 +12,5 @@ C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\C
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\Catalogo_WPF_05-04.pdb
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\MySql.Data.dll
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\catalogo2018.Properties.Resources.resources
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\Catalogo_WPF_05-04_MarkupCompile.lref

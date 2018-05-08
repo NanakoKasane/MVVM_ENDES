@@ -26,5 +26,10 @@ namespace catalogo2018
             InitializeComponent();
             
         }
+
+        private void btn_Conectar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
