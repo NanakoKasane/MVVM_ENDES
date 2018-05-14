@@ -2,28 +2,31 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:catalogo2018" x:Class="catalogo2018.MainWindow"
-        Title="Catálogo de Dvd" Height="361.842" Width="596.731" ResizeMode="NoResize" >
+        Title="Catálogo de Dvd" Height="357.342" Width="719.731" ResizeMode="NoResize" >
 
     <Grid>
-        <Grid.DataContext> 
+        <Grid.DataContext>
             <local:CatalogoVM/>
-        </Grid.DataContext>      
+        </Grid.DataContext>
         <!-- Hay que compilar (F6) para que el entorno ajuste el contexto y enlace de datos -->
-        
-        <DataGrid HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="230" Width="457"/>
 
-        
+        <DataGrid SelectionMode="Single" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="230" Width="571"
+                  ItemsSource="{Binding Listado}" SelectedItem="{Binding DVDSeleccionado}"/>
+        <!-- En ItemsSource es donde le indicas la fuente de datos (la colección) -->
+        <!-- SelectedItem tiene el item seleccionado, y cada item del DataGrid es un DVD. Obtiene el valor del DVD y lo usa para mostrar su país en la barra de estado -->
+
+
         <!-- En el botón las propiedades (background en este caso), le damos al cuadradito de su derecha -> crear Enlace de Datos y se hace el BINDING así -->
         <Button x:Name="btn_Conectar" Background="{Binding ColorConectar}" Command="{Binding ConectarBD_Click, Mode=OneWay}" Content="Conectar" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" Width="85" Height="32" Click="btn_Conectar_Click" />
         <!-- Command está en Varios en la ventana de propiedades -->
 
         <Button x:Name="btn_Desconectar" Content="Desconectar" IsEnabled="{Binding Conectado, Mode=OneWay}" Command="{Binding DesconectarBD_Click, Mode=OneWay}" HorizontalAlignment="Left" Margin="121,256,0,0" VerticalAlignment="Top" Width="83" Height="32" />
-        <Button x:Name="btn_Listar" Content="Listar DVD" IsEnabled="{Binding Conectado, Mode=OneWay}" HorizontalAlignment="Left" Margin="235,256,0,0" VerticalAlignment="Top" Width="85" Height="32" />
+        <Button x:Name="btn_Listar" Content="Listar DVD" IsEnabled="{Binding Conectado, Mode=OneWay}" HorizontalAlignment="Left" Margin="235,256,0,0" VerticalAlignment="Top" Width="85" Height="32" Command="{Binding ListarTodosDVD_Click, Mode=OneWay}" />
 
         <Label x:Name="lbl_Estado" Content="{Binding Mensaje}" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Width="571" Height="27"/>
 
-        <RadioButton IsChecked="{Binding TipoConexion}" Content="MySQL" HorizontalAlignment="Left" Margin="510,189,0,0" VerticalAlignment="Top" GroupName="bd"/>
-        <RadioButton Content="SQLite" HorizontalAlignment="Left" Margin="510,224,0,0" VerticalAlignment="Top" GroupName="bd"/>
+        <RadioButton IsChecked="{Binding TipoConexion}" Content="MySQL" HorizontalAlignment="Left" Margin="620,189,0,0" VerticalAlignment="Top" GroupName="bd"/>
+        <RadioButton Content="SQLite" HorizontalAlignment="Left" Margin="620,224,0,0" VerticalAlignment="Top" GroupName="bd"/>
 
     </Grid>
 </Window>

@@ -239,7 +239,18 @@ namespace CatalogoDVD_consola
 
         public Pais SeleccionarPais(string iso2)
         {
-            throw new NotImplementedException();
+            Pais paisResultado = new Pais();
+            string orden = string.Format("select nombre from pais where iso2 = '{0}'", iso2);
+            MySqlCommand cmd = new MySqlCommand(orden, conexion);
+
+            object salida = cmd.ExecuteScalar();
+            if (salida != null)
+            {
+                paisResultado.Iso2 = iso2;
+                paisResultado.Nombre = salida.ToString();
+            }
+
+            return paisResultado;
         }
 
         #endregion 

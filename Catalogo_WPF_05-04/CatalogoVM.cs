@@ -18,6 +18,10 @@ namespace catalogo2018
         IDAO _dao;
         bool _tipoConexion = true; // MySQL -> true, SQlite -> false
         string _mensaje = "<Sin datos>";
+
+        List<Dvd> _listado;
+        Dvd _unDvd;
+
         #endregion 
 
 
@@ -74,6 +78,35 @@ namespace catalogo2018
             }
         }
 
+        public List<Dvd> Listado
+        {
+            get { return _listado; }
+            set {
+                    if (_listado != value)
+                    {
+                        _listado = value;
+                        NotificarCambioDePropiedad("Listado");
+                    }
+                }
+        }
+
+        public Dvd DVDSeleccionado
+        {
+            get { return _unDvd; }
+            set {
+                    if (_unDvd != value)
+                    {                        
+                        _unDvd = value;                        
+
+                        if (_dao.Conectado() && _unDvd != null)
+                            Mensaje = _dao.SeleccionarPais(_unDvd.Pais).Nombre; // Recojo el nombre del país
+                        else
+                            Mensaje = "<Desconocido>";
+
+                    }
+                }
+        }
+
         #endregion
 
         #region Comandos
@@ -94,6 +127,15 @@ namespace catalogo2018
                 return new RelayCommand(o => DesconectarBD(), o => true);
             }
         }
+
+        public ICommand ListarTodosDVD_Click
+        {
+            get
+            {
+                return new RelayCommand(o => ListarTodosDVD(), o => true);
+            }
+        }
+
 
         // Todo método para el comando obligatoriamente devuelve VOID y NO lleva parámetros:
         // Todo ICommand va a asociado a un método de la VM 
@@ -129,8 +171,24 @@ namespace catalogo2018
             _dao.Desconectar();
             Mensaje = "Desconectado de la BD";
 
+            Listado = null; // en el set de la propiedad ya está puesta la notificación así que no es necesaria ahora
             NotificarCambioDePropiedad("ColorConectar");
             NotificarCambioDePropiedad("Conectado");
+        }
+
+        private void ListarTodosDVD()
+        {
+            if (TipoConexion) // MYSQL
+            {
+                int nFilas = 0;
+                Listado = _dao.SeleccionarPA(null, out nFilas);
+                Mensaje = string.Format("Filas encontradas: {0}", nFilas);
+            }
+
+            else
+            {
+
+            }
         }
 
         #endregion 
