@@ -11,10 +11,10 @@
         <!-- Hay que compilar (F6) para que el entorno ajuste el contexto y enlace de datos -->
 
         <DataGrid SelectionMode="Single" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="230" Width="571"
-                  ItemsSource="{Binding Listado}" SelectedItem="{Binding DVDSeleccionado}"/>
+                  ItemsSource="{Binding Listado}" SelectedItem="{Binding DVDSeleccionado, Mode=TwoWay}" CanUserAddRows="False"/>
         <!-- En ItemsSource es donde le indicas la fuente de datos (la colección) -->
         <!-- SelectedItem tiene el item seleccionado, y cada item del DataGrid es un DVD. Obtiene el valor del DVD y lo usa para mostrar su país en la barra de estado -->
-
+        <!-- CanUserAddRows : Para que no salga una fila al final que se pueda añadir -->
 
         <!-- En el botón las propiedades (background en este caso), le damos al cuadradito de su derecha -> crear Enlace de Datos y se hace el BINDING así -->
         <Button x:Name="btn_Conectar" Background="{Binding ColorConectar}" Command="{Binding ConectarBD_Click, Mode=OneWay}" Content="Conectar" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" Width="85" Height="32" Click="btn_Conectar_Click" />
@@ -27,6 +27,9 @@
 
         <RadioButton IsChecked="{Binding TipoConexion}" Content="MySQL" HorizontalAlignment="Left" Margin="620,189,0,0" VerticalAlignment="Top" GroupName="bd"/>
         <RadioButton Content="SQLite" HorizontalAlignment="Left" Margin="620,224,0,0" VerticalAlignment="Top" GroupName="bd"/>
+
+        <Button Command="{Binding BorrarDVD_Click}" Content="Borrar" IsEnabled="{Binding HayDVDSeleccionado}" HorizontalAlignment="Left" Margin="352,256,0,0" VerticalAlignment="Top" Width="90" Height="32"/>
+        <Button Command="{Binding ActualizarDVD_Click}" Content="Actualizar" IsEnabled="{Binding HayDVDSeleccionado}" HorizontalAlignment="Left" Margin="484,256,0,0" VerticalAlignment="Top" Width="97" Height="32"/>
 
     </Grid>
 </Window>

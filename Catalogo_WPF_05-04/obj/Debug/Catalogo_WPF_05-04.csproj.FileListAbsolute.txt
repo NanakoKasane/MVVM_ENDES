@@ -14,3 +14,11 @@ C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\M
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\catalogo2018.Properties.Resources.resources
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\obj\Debug\Catalogo_WPF_05-04_MarkupCompile.lref
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\EntityFramework.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\System.Data.SQLite.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\EntityFramework.xml
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_WPF_05-04\bin\Debug\System.Data.SQLite.xml

@@ -6,3 +6,11 @@ C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\obj\Deb
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\obj\Debug\Catalogo_Consola_05-04.exe
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\obj\Debug\Catalogo_Consola_05-04.pdb
 C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\MySql.Data.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\EntityFramework.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\System.Data.SQLite.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\EntityFramework.xml
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alumno1718\Desktop\3 EV ENTORNO\CATALOGO\Catalogo_Consola_05-04\bin\Debug\System.Data.SQLite.xml

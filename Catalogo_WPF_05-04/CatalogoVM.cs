@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 //-------------------------
 using System.ComponentModel;
 using CatalogoDVD_consola;
+using CatalogoDVD;
 
 using System.Windows.Input; // PARA ICOMMAND
 
@@ -103,8 +104,22 @@ namespace catalogo2018
                         else
                             Mensaje = "<Desconocido>";
 
+                        NotificarCambioDePropiedad("HayDVDSeleccionado");
                     }
                 }
+        }
+
+        public bool HayDVDSeleccionado
+        {
+            get
+            {
+                if (DVDSeleccionado != null)
+                    return true;
+                else
+                    return false;
+
+                // return DVDSeleccionado != null
+            }
         }
 
         #endregion
@@ -136,6 +151,21 @@ namespace catalogo2018
             }
         }
 
+        public ICommand BorrarDVD_Click
+        {
+            get
+            {
+                return new RelayCommand(o => BorrarDVD(), o => true);
+            }
+        }
+
+        public ICommand ActualizarDVD_Click
+        {
+            get
+            {
+                return new RelayCommand(o => ActualizarDVD(), o => true);
+            }
+        }
 
         // Todo método para el comando obligatoriamente devuelve VOID y NO lleva parámetros:
         // Todo ICommand va a asociado a un método de la VM 
@@ -153,7 +183,9 @@ namespace catalogo2018
                 }
                 else // SQlite
                 {
-
+                    _dao = new DAO_SQLite();
+                    _dao.Conectar(null, null, "catalogo.db", null, null);
+                    Mensaje = "Conectado con éxito a la BD desde SQLite";
                 }
             }
             catch (Exception e)
@@ -187,8 +219,28 @@ namespace catalogo2018
 
             else
             {
-
+                Listado = _dao.Seleccionar(null);
+                Mensaje = "Datos cargados correctamente";
             }
+        }
+
+        private void BorrarDVD()
+        {
+            Dvd unDVD = DVDSeleccionado;
+
+            if (HayDVDSeleccionado)
+            {
+                if (_dao.Borrar(unDVD.Codigo.ToString()) == 1)  // Borrar devuelve número de filas afectadas
+                    Mensaje = "Registro eliminado";
+                else
+                    Mensaje = "No se ha podido eliminar el registro";
+            }
+        }
+
+        private void ActualizarDVD()
+        {
+            Dvd unDVD = DVDSeleccionado;
+            _dao.Actualizar(unDVD);
         }
 
         #endregion 

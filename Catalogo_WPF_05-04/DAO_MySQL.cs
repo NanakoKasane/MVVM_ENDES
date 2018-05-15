@@ -274,7 +274,19 @@ namespace CatalogoDVD_consola
 
         public int Actualizar(Dvd unDVD)
         {
-            throw new NotImplementedException();
+            string orden;
+
+            if (unDVD != null)
+            {
+                orden = string.Format("update dvd set titulo='{0}', artista='{1}', pais='{2}', compania='{3}', precio={4}, anio='{5}' where codigo='{6}' ",
+                    unDVD.Titulo, unDVD.Artista, unDVD.Pais, unDVD.Pais, unDVD.Compania, unDVD.Precio, unDVD.Anio, unDVD.Codigo);
+
+                MySqlCommand cmd = new MySqlCommand(orden, conexion);
+                return cmd.ExecuteNonQuery();
+            }
+
+            else
+              return -1;
         }
 
         public int Insertar(Dvd unDVD)
